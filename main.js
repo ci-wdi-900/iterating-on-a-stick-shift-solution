@@ -1,9 +1,9 @@
-const makeDino = function(species, period, carnivore, extinct = false) {
+const makeDino = function(newSpecies, newPeriod, newCarnivore, newExtinct = false) {
   return {
-    species: species,
-    period: period,
-    carnivore: carnivore,
-    extinct: extinct
+    species: newSpecies,
+    period: newPeriod,
+    carnivore: newCarnivore,
+    extinct: newExtinct,
   }
 }
 
@@ -18,9 +18,9 @@ const makeSingular = function(dinosaur) {
 const truncateSpecies = function(dinosaur) {
   const newDino = makeDino(dinosaur.species, dinosaur.period, dinosaur.carnivore, dinosaur.extinct);
 
-  newDino.species = newDino.species.length <= 10
-    ? newDino.species
-    : newDino.species.slice(0, 7) + '...';
+  if (newDino.species.length <= 10) {
+    newDino.species = newDino.species.slice(0, 7) + '...';
+  }
 
   return newDino; 
 }
