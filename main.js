@@ -26,7 +26,7 @@ const truncateSpecies = function(dinosaur) {
 }
 
 const makeExtinct = function(dinosaur) {
-
+  return makeDino(dinosaur.species, dinosaur.period, dinosaur.carnivore, true)
 }
 
 module.exports = {
