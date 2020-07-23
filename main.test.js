@@ -171,14 +171,14 @@ describe('makeExtinct', () => {
       species: 'T-Rex',
       period: 'Cretaceous',
       carnivore: true,
-      extinct: true
+      extinct: false
     };
 
     const dino = {
       species: 'T-Rex',
       period: 'Cretaceous',
       carnivore: true,
-      extinct: true
+      extinct: false
     };
 
     makeExtinct(dino)
