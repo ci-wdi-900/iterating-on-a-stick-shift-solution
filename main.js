@@ -1,3 +1,5 @@
+// Your code below.
+
 const makeDino = function(newSpecies, newPeriod, newCarnivore, newExtinct = false) {
   return {
     species: newSpecies,
@@ -7,29 +9,30 @@ const makeDino = function(newSpecies, newPeriod, newCarnivore, newExtinct = fals
   }
 }
 
+const makeExtinct = function(dinosaur) {
+  return makeDino(dinosaur.species, dinosaur.period, dinosaur.carnivore, true)
+}
+
 const makeSingular = function(dinosaur) {
   if (dinosaur.species.endsWith('us')) {
     return makeDino(dinosaur.species.slice(0, -2), dinosaur.period, dinosaur.carnivore, dinosaur.extinct)
   } else {
-    return dinosaur;
+    return makeDino(dinosaur.species, dinosaur.period, dinosaur.carnivore, dinosaur.extinct)
   }
 }
 
 const truncateSpecies = function(dinosaur) {
   const newDino = makeDino(dinosaur.species, dinosaur.period, dinosaur.carnivore, dinosaur.extinct);
 
-  if (newDino.species.length <= 10) {
+  if (newDino.species.length >= 10) {
     newDino.species = newDino.species.slice(0, 7) + '...';
   }
 
   return newDino; 
 }
 
-const makeExtinct = function(dinosaur) {
-  return makeDino(dinosaur.species, dinosaur.period, dinosaur.carnivore, true)
-}
 
-
+// Our code below; DO NOT TOUCH!
 if (typeof makeDino === 'undefined') {
   makeDino = undefined;
 }
