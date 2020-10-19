@@ -1,8 +1,3 @@
-# Iterating on a Stick Shift
+# New Dinosaurs Yay... Question Mark? - Solution
 
-### Guidelines
-
-For this project, do _not_ use the array built-in methods for mapping, filtering, and sorting. We'll be learning to drive these vehicles/array methods manually, and soon enough, how to build our own array methods.
-
-`npm install`
-`npm test`
+One possible set of solutions to the [New Dinosaurs Yay Question Mark](https://github.com/ci-wdi-900/new-dinosaurs-yay-question-mark) exercise.
